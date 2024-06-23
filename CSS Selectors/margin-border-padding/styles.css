@@ -1,0 +1,7 @@
+.box-model{
+    padding: 10px 20px 10px 20px;
+    margin: 30px 40px 30px 40px;
+    border-style: double;
+    border-color: black;
+
+}

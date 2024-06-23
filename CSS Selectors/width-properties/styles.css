@@ -1,0 +1,6 @@
+.width-example {
+    width: 200px; 
+    min-width: 150px; 
+    max-width: 300px;
+    background-color: skyblue;
+}

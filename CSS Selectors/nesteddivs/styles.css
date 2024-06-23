@@ -1,0 +1,8 @@
+.parent {
+    width: 60%;
+    background-color: aqua;
+}
+.child{
+    width: 50%;
+    background-color: bisque;
+}
