@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Change the content of a cell</title>
+</head>
+<body>
+  <table id="myTable" border="1">
+    <tbody>
+    <tr>
+      <td>Row1 cell1</td>
+      <td>Row1 cell2</td>
+    </tr>
+    <tr>
+      <td>Row2 cell1</td>
+      <td>Row2 cell2</td>
+    </tr>
+    <tr>
+      <td>Row3 cell1</td>
+      <td>Row3 cell2</td>
+    </tr>
+</tbody>
+  </table>
+  <form>
+    <input type="button" onclick="changeContent()" value="Change content">
+  </form>
+  <script>
+    function changeContent(){
+    const secondRow = document.querySelector('tr:nth-of-type(2)');
+    
+    const secondRowCellOne =secondRow.querySelector('td:nth-of-type(1)');
+    const secondRowCell =  secondRow.querySelector('td:nth-of-type(2)');
+    secondRowCellOne.textContent = 'Hello'
+    secondRowCell.textContent = 'Sirma';
+    
+    
+    }
+  </script>
+</body>
+</html>

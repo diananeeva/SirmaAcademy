@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="list-app">
+        <p>Click on the item to change the text, or click on the button to create a new item.</p>
+        <ul id="items">
+            <li>Map,filter,reduce</li>
+            <li>The DOM</li>
+            <li>Callbacks</li>
+        </ul>
+        <input type="text" value="" id="myInput">
+        <button type="button" id="buttonCreate">Create New</button>
+        <button id="buttonDel">Delete</button>
+      <div>
+      <script>
+     buttonCreate.addEventListener("click", myFunction);
+     function myFunction(){
+        const text = document.getElementById('myInput');
+        const ulList = document.getElementById('items');
+        const buttonDel = document.getElementById('buttonDel')
+
+        const newListItem = document.createElement('li');
+        
+        const inputValue = text.value;
+        newListItem.textContent = inputValue;
+
+        ulList.appendChild(newListItem);
+        buttonDel.addEventListener('click', deleteFunction)
+        function deleteFunction(){
+            ulList.removeChild(newListItem);
+        }
+     }
+     
+      </script>
+</body>
+</html>

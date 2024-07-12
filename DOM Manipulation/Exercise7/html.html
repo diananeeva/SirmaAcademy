@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset=utf-8 />
+  <title>Change the content of a cell</title>
+  <style type="text/css">
+    body {margin: 30px;}
+  </style>  
+</head>
+<body>
+  <table id="myTable" border="1">
+  </table>
+  <form>
+    <input type="button" onclick="createTable()" value="Create the table">
+  </form>
+  <script>
+    function createTable() {
+  const body = document.getElementsByTagName("body")[0];
+
+  
+  const tbl = document.createElement("table");
+  const tblBody = document.createElement("tbody");
+
+  
+  for (let j = 0; j <= 2; j++) {
+    const row = document.createElement("tr");
+
+    for (let i = 0; i < 2; i++) {
+      const cell = document.createElement("td");
+      const cellText = document.createTextNode("row " + j + ", column " + i);
+
+      cell.appendChild(cellText);
+      row.appendChild(cell);
+    }
+
+    tblBody.appendChild(row);
+  }
+
+  
+  tbl.appendChild(tblBody);
+  body.appendChild(tbl);
+  
+  tbl.setAttribute("border", "2");
+}
+    
+  </script>
+</body>
+</html>
